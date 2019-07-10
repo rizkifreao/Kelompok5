@@ -74,6 +74,6 @@ Untuk **API** kecuali login Anda harus memasukkan token yang Anda dapatkan setel
 
     `[POST]` `/auth/register`
 
-    body |
-    -----|
-    { "username" : "admin","password" : "Admin123$" } |
+    METHOD | URL | BODY
+    -------|-----|------
+    `[POST]` | `/auth/register` | { "username" : "admin","password" : "Admin123$" }
