@@ -40,13 +40,13 @@ Contrroller.Register = (req, res) => {
 }
 
 Contrroller.Login = (req, res) => {
-    model.User.findOrCreate({
+    model.User.findOne({
         where: {
             email: req.body.email
         }
     }).then(user => {
         if (!user) {
-            res.status(400).send('Email tidak ada !!')
+            res.sendStatus(400).send('User tidak ada !!')
         }
 
         bcrypt.compare(req.body.password, user.get('password'), function (err, isMatch) {
@@ -72,8 +72,5 @@ Contrroller.Login = (req, res) => {
                 res.status(400).send('Password salah !!')
             }
         })
-    }).catch(e => res.status(400).json({
-        error: true,
-        error_message: e
-    }))
+    })
 }
