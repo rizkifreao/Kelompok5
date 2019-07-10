@@ -70,10 +70,6 @@ Anda dapat menguji API dengan memasukkan header  `Auth-Key` dengan nilai `aplica
 
 Untuk **API** kecuali login Anda harus memasukkan token yang Anda dapatkan setelah berhasil login. Header untuk keduanya terlihat Otorisasi ini
 
-1. **Register**
-
-    `[POST]` `/auth/register`
-
-    METHOD | URL | BODY
-    -------|-----|------
-    `[POST]` | `/auth/register` | { "username" : "admin","password" : "Admin123$" }
+METHOD | URL | BODY
+-------|-----|------
+`[POST]` | `/auth/register` | { "username" : "admin","password" : "Admin123$" }
