@@ -4,7 +4,7 @@ module.exports.verifyToken = (req, res, next) => {
     if (typeof bearerHeader !== 'undefined') {
         const bearer = bearerHeader.split(' ');
         const bearerToken = bearer[1];
-        req.token = bearerHeader
+        req.token = bearerToken;
         next();
     } else {
         res.status(403).send('Login terlebih dahulu')
