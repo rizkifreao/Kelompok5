@@ -7,6 +7,6 @@ module.exports.verifyToken = (req, res, next) => {
         req.token = bearerToken;
         next();
     } else {
-        res.status(403).send('Login terlebih dahulu')
+        res.status(403).send('Login terlebih dahulu.')
     }
 }
