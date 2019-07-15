@@ -162,3 +162,38 @@ Controller.DeleteBuku = (req, res) => {
         }
     })
 }
+
+// ORDER BUKU
+Controller.OrderBuku = (req, res) => {
+
+    let values = [];
+
+    jwt.verify(req.token, process.env.SECRETKEY, (error, userData) => {
+        if (error) {
+            res.status(400).json({
+                error: true,
+                error_message: error
+            })
+        } else {
+
+            // TAMPUNG DATA KEDALAM ARRAY
+            for (let i = 0; i < req.body.books.length; i++) {
+                values[i] = {
+                    tgl_order: new Date(),
+                    UserId: userData.id,
+                    BookId: req.body.books[i]
+                }
+            }
+
+            Model.Order.bulkCreate(values)
+                .then(order => res.json({
+                    message: "Berhasil Order",
+                    data: order
+                })).catch(e => res.status(400).json({
+                    message: 'Buku tidak ada',
+                    error: e
+                }));
+
+        }
+    })
+}
