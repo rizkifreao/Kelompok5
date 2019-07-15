@@ -23,4 +23,7 @@ Router.put('/update/:id', Auth.verifyToken, bookController.EditBuku);
 // hapus data buku (admin)
 Router.delete('/delete/:id', Auth.verifyToken, bookController.DeleteBuku);
 
+// order book
+Router.post('/order', Auth.verifyToken, bookController.OrderBuku);
+
 module.exports = Router;
