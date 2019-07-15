@@ -1,29 +1,14 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Books', {
+    return queryInterface.createTable('Orders', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      judul: {
-        type: Sequelize.STRING
-      },
-      pengarang: {
-        type: Sequelize.STRING
-      },
-      pengarang: {
-        type: Sequelize.STRING
-      },
-      penerbit: {
-        type: Sequelize.STRING
-      },
-      harga: {
-        type: Sequelize.INTEGER
-      },
-      tahun_terbit: {
+      tgl_order: {
         type: Sequelize.DATE
       },
       createdAt: {
@@ -37,6 +22,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Books');
+    return queryInterface.dropTable('Orders');
   }
 };
