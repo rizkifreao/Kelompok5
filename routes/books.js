@@ -18,8 +18,9 @@ Router.get('/detail/:id', Auth.verifyToken, bookController.getDetail);
 Router.post('/create', Auth.verifyToken, bookController.AddBuku);
 
 // edit data buku (admin)
-
+Router.put('/update/:id', Auth.verifyToken, bookController.EditBuku);
 
 // hapus data buku (admin)
+Router.delete('/delete/:id', Auth.verifyToken, bookController.DeleteBuku);
 
 module.exports = Router;
