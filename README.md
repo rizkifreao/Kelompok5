@@ -35,13 +35,17 @@ Module third-party yang digunakan yaitu `express`, `nodemon`, `sequelize`, `bycr
 
     **`$ sequelize init`**
 
-    >Untuk membuat sebuah migrasi atau model anda dapat menggunakan perintah `$ sequelize model:create`
-    pada CLI anda.
+    >Untuk membuat sebuah migrasi atau model baru anda dapat menggunakan perintah `$ sequelize model:create`
+    pada CLI anda. ***Lewati langkah ini jika tidak diperlukan**.
     **contoh**: `$ sequelize model:create --name User --attributes username:string,password:string` atau anda dapat mengunjungi deokumentasi Sequelize pada link ini [Sequelize migration](http://docs.sequelizejs.com/manual/migrations.html)
 
 4. **Jalankan Migrations**
 
-    Anda dapat membuat tabel database dengan menjalankan migrasi:
+    Sebelum Anda menjalankan migrasi, Anda diharuskan membuat database dilokal Anda terlebih dahulu dengan nama database `kelompok5`. Atau anda dapat menyesuaikan nama database Anda pada `config/config.json` di bagian development.
+    
+    ![image](https://user-images.githubusercontent.com/48593616/61299960-49eebc80-a80b-11e9-8af6-e6df988fb4a9.png)
+    
+    Setelah itu ketikan perintah ini pada terminal/CLI Anda untuk menjalankan migrasi:
 
     **`$ sequelize db:migrate`**
 
