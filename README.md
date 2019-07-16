@@ -49,7 +49,7 @@ Module third-party yang digunakan yaitu `express`, `nodemon`, `sequelize`, `bycr
 
 5. **Import sql file**
 
-    Setelah instalasi selesai maka selanjutnya import file **kelompok5.sql** ke database server anda.
+    Atau jika anda tidak menggunakan migrasi Anda dapat import file **kelompok5.sql** ke database server anda.
 
 6. **Jalankan aplikasi anda**
 
