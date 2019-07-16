@@ -70,7 +70,5 @@ Anda dapat menguji API dengan memasukkan header  `Auth-Key` dengan nilai `aplica
 
 Untuk **API** kecuali login Anda harus memasukkan token yang Anda dapatkan setelah berhasil login. Header untuk keduanya terlihat Otorisasi ini
 
-METHOD | URL | BODY
--------|-----|------
-`[POST]` | `/auth/register` | { "username" : "admin","password" : "Admin123$" }
+Anda dapat melihat dokumentasi di [POSTMAN](https://documenter.getpostman.com/view/6954079/SVSKM944)
 
