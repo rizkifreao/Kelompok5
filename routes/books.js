@@ -11,14 +11,19 @@ var Auth = require('../config/auth');
 */
 Router.get('/', Auth.verifyToken, bookController.getAll);
 
+// lihat detail buku
 Router.get('/detail/:id', Auth.verifyToken, bookController.getDetail);
 
+// membuat data buku baru (admin)
 Router.post('/create', Auth.verifyToken, bookController.AddBuku);
 
+// edit data buku (admin)
 Router.put('/update/:id', Auth.verifyToken, bookController.EditBuku);
 
+// hapus data buku (admin)
 Router.delete('/delete/:id', Auth.verifyToken, bookController.DeleteBuku);
 
+// order book
 Router.post('/order', Auth.verifyToken, bookController.OrderBuku);
 
 module.exports = Router;
