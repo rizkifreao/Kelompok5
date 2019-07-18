@@ -2,6 +2,7 @@
   "name": "kelompok5",
   "version": "0.0.0",
   "private": true,
+  "author": "161024006",
   "scripts": {
     "start": "nodemon ./bin/www"
   },
